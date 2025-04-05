@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Karol Ferrer - VIP</title>
+    <title>Karol Ferrer - VIP Companion</title>
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Italianno&family=Montserrat:wght@400;600&family=Poppins:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
 
-    <!-- FontAwesome Icons -->
+    <!-- FontAwesome (for hearts) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -20,25 +20,22 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="css/styles.css" />
 
-    <!-- Service Worker (PWA) -->
-    <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker
-          .register("service-worker.js")
-          .then((registration) => {
-            console.log(
-              "Service Worker registered with scope:",
-              registration.scope
-            );
-          })
-          .catch((error) => {
-            console.log("Service Worker registration failed:", error);
-          });
-      }
-    </script>
-
     <meta name="theme-color" content="#000000" />
     <link rel="manifest" href="manifest.json" />
+
+    <!-- Smooth Scroll -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document
+              .querySelector(this.getAttribute("href"))
+              .scrollIntoView({ behavior: "smooth" });
+          });
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -55,25 +52,22 @@
       </button>
     </div>
 
-    <!-- TOPBAR -->
-    <div class="topbar">
-      <div class="logo">
-        <span class="karol">Karol</span><span class="ferrer">Ferrer</span>
-      </div>
-      <div class="burger">&#9776;</div>
-    </div>
+    <!-- CENTERED LOGO -->
+    <header class="logo">Karol Ferrer</header>
 
     <!-- NAVIGATION -->
     <nav>
-      <a href="#home"><i class="fas fa-user"></i> About Me</a>
-      <a href="#gallery"><i class="fas fa-camera"></i> Gallery</a>
-      <a href="#livecam"><i class="fas fa-video"></i> Live Cam</a>
+      <a href="#about">About Me</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#livecam">Live Cam</a>
+      <a href="#wheres-karol">Where's Karol</a>
+      <a href="#bookings">Bookings</a>
     </nav>
 
     <!-- TEASER VIDEO -->
-    <section class="teaser">
+    <section class="teaser" id="home">
       <div class="video-container">
-        <video controls autoplay muted loop width="100%">
+        <video controls autoplay muted loop>
           <source src="videos/karol.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -81,13 +75,68 @@
       </div>
     </section>
 
-    <!-- HERO SECTION -->
-    <section class="hero" id="home">
+    <!-- ABOUT SECTION -->
+    <section class="hero" id="about">
       <h1>Welcome to Karol Ferrer's World</h1>
       <p>
-        Meet Karol, your 25-year-old ultimate companion — offering elite
-        experiences, sensual massages, unforgettable travels, and exclusive VIP
-        moments just for you.
+        Your 25-year-old ultimate companion — offering elite experiences,
+        sensual massages, unforgettable travels, and exclusive VIP moments
+        tailored just for you.
+      </p>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section class="hero" id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-scroll">
+        <img src="images/photo1.jpg" alt="Apartment 1" />
+        <img src="images/photo2.jpg" alt="Apartment 2" />
+        <img src="images/photo3.jpg" alt="Apartment 3" />
+        <!-- Add more images -->
+      </div>
+    </section>
+
+    <!-- LIVE CAM SECTION -->
+    <section class="hero" id="livecam">
+      <h2>Live Cam</h2>
+      <p>
+        Private shows available on request. Contact Karol to schedule an
+        exclusive live session.
+      </p>
+    </section>
+
+    <!-- WHERE'S KAROL SECTION -->
+    <section class="wheres-karol" id="wheres-karol">
+      <h2>Where's Karol?</h2>
+      <p>Alameda Lorena, 473 - São Paulo</p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps?q=Alameda+Lorena+473,+São+Paulo&output=embed"
+          width="100%"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- HEART DIVIDER -->
+    <section class="hearts-divider">
+      <div class="hearts">
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-heart"></i>
+      </div>
+    </section>
+
+    <!-- BOOKINGS SECTION -->
+    <section class="bookings" id="bookings">
+      <h2>For Incall Bookings</h2>
+      <p>
+        Karol's upscale apartment offers complete discretion, elegant decor, and
+        a safe environment. Please maintain respectful behavior. No loudness or
+        rudeness tolerated. Classy gentlemen only.
       </p>
     </section>
   </body>

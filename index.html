@@ -141,11 +141,18 @@
           Activate your push notifications so you know when I'm online, baby!
         </p>
 
-        <video muted autoplay loop class="livecam-stream">
-          <source src="videos/karol-teaser.mp4" type="video/mp4" />
-        </video>
+        
 
-        <button class="play-button">WATCH ME</button>
+        <div class="livecam-container">
+  <video id="liveCamVideo" autoplay muted loop playsinline>
+    <source src="videos/karol-teaser.mp4" type="video/mp4">
+  </video>
+  <div class="overlay" id="liveOverlay">
+    <i class="fas fa-lock"></i>
+    <p>Create your account and have full access to my videos, lives and private events.</p>
+  </div>
+  <button class="play-button">PLAY</button>
+</div>
 
         <form class="login-form">
           <input type="text" placeholder="Username" />

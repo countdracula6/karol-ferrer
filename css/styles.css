@@ -1172,3 +1172,88 @@ h2 {
 .chat-input button:hover {
   background: #c71585;
 }
+
+.live-chat-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: none; /* No background */
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.5s ease;
+}
+
+.live-chat-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.chat-messages {
+  max-height: 80px;
+  overflow-y: auto;
+  padding-right: 5px;
+  text-align: left;
+  font-size: 0.8rem;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.karol-message,
+.user-message {
+  background: none; /* No background */
+  margin-bottom: 3px;
+  padding: 2px 5px;
+  border-radius: 0;
+  color: white;
+  max-width: 75%;
+  font-size: 0.8rem;
+}
+
+.user-message {
+  color: #c71585; /* user text pinkish */
+  align-self: flex-end;
+}
+
+.chat-input {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 6px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 0.8rem;
+}
+
+.chat-input button {
+  padding: 6px 10px;
+  background-color: #8b1e3f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.chat-input button:hover {
+  background: #c71585;
+}
+
+let chatOverlayTimeout;
+
+function showChatOverlay() {
+  const chatOverlay = document.getElementById('liveChatOverlay');
+  if (chatOverlay) {
+    chatOverlay.classList.remove('hidden');
+    
+    clearTimeout(chatOverlayTimeout);
+    chatOverlayTimeout = setTimeout(() => {
+      chatOverlay.classList.add('hidden');
+    }, 3000); // Hide after 3 seconds
+  }
+}

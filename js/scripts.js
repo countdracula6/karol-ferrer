@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (liveCamVideo) {
     liveCamVideo.addEventListener("ended", function () {
       liveCamLoops++;
-      if (liveCamLoops >= 3) {
+      if (liveCamLoops >= 1) {
         liveOverlay.style.display = "flex"; // Show padlock overlay
         liveCamVideo.pause(); // STOP teaser video
       } else {

@@ -84,6 +84,8 @@
         <!-- New Private Page -->
       </nav>
 
+      <br>
+
       <div class="teaser-container">
         <video id="teaserVideo" autoplay muted loop playsinline>
           <source src="videos/karol.mp4" type="video/mp4" />
@@ -179,41 +181,61 @@
       <!-- LIVE CAM -->
       <section class="livecam" id="livecam">
         <h2>Live Cam</h2>
+      
+        <!-- Status -->
         <div class="status not-available" id="liveStatus">
-          NOT AVAILABLE NOW!
+          OFFLINE NOW
         </div>
+      
         <p class="push-message">
           Activate your push notifications so you know when I'm online, baby!
         </p>
-
+      
+        <!-- Live Cam Container -->
         <div class="livecam-container">
           <video id="liveCamVideo" autoplay muted playsinline>
-            <source src="videos/karol-teaser.mp4" type="video/mp4" />
+            <source src="videos/livedakarol.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
           </video>
-
+      
+          <!-- Floating Chat over Video -->
+          <div class="live-chat-overlay" id="liveChatOverlay">
+            <div id="chatMessages" class="chat-messages">
+              <div class="karol-message">Hey baby 😘</div>
+              <div class="karol-message">Missing you already 💖</div>
+            </div>
+      
+            <div class="chat-input">
+              <input type="text" id="userMessage" placeholder="Type your message..." onfocus="showChatOverlay()" />
+              <button onclick="sendMessage()">Send</button>
+            </div>
+          </div>
+      
+          <!-- Overlay After 3 Loops -->
           <div class="overlay" id="liveOverlay">
             <h3>Become a Subscriber</h3>
-            <!-- New luxury title -->
             <i class="fas fa-lock"></i>
             <p>
               Create your account and have full access to my videos, lives and
               private events.
             </p>
-            <a href="love-me.html" class="subscribe-btn">LOVE HER</a>
-            <!-- Button to private VIP page -->
+            <a href="love-me.html" class="subscribe-btn">Watch Me</a>
           </div>
         </div>
-
+      
+        <!-- Login Form -->
         <form class="login-form">
           <input type="text" placeholder="Username" required />
           <input type="password" placeholder="Password" required />
           <button type="submit">Login</button>
         </form>
-
+      
+        <!-- Signup Link -->
         <div class="signup">
           New here? <a href="#">Sign Up</a> to buy packs & chat live!
         </div>
       </section>
+      
 
       <!-- WHERE'S KAROL -->
       <section class="wheres-karol" id="wheres-karol">

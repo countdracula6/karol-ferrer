@@ -987,3 +987,188 @@ h2 {
 .chat-input button:hover {
   background: #c71585;
 }
+
+.topbar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background: #111;
+  padding: 10px 0;
+  border-bottom: 2px solid #8b1e3f;
+}
+
+.topbar a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.topbar a:hover {
+  color: #c71585;
+}
+
+.comment-box {
+  display: none;
+  margin: 1rem;
+  text-align: center;
+}
+
+.comment-box textarea {
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.comment-box button {
+  margin-top: 10px;
+  padding: 8px 20px;
+  background: #8b1e3f;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.comment-box button:hover {
+  background: #c71585;
+}
+
+.livecam {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.livecam h2 {
+  font-family: "Poppins", sans-serif;
+  color: #8b1e3f;
+  margin-bottom: 1rem;
+}
+
+.status {
+  font-family: "Poppins", sans-serif;
+  padding: 8px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+  background: #c71585;
+  color: white;
+  font-weight: bold;
+}
+
+.livecam-container {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 1rem auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.livecam-container video {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.overlay i {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.subscribe-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #8b1e3f;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.subscribe-btn:hover {
+  background: #c71585;
+}
+
+.live-chat-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.5s ease;
+}
+
+.live-chat-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.chat-messages {
+  max-height: 100px;
+  overflow-y: auto;
+  margin-bottom: 5px;
+}
+
+.karol-message,
+.user-message {
+  background: #8b1e3f;
+  color: white;
+  margin-bottom: 5px;
+  padding: 6px 10px;
+  border-radius: 15px;
+  max-width: 75%;
+  font-size: 0.8rem;
+}
+
+.user-message {
+  background: #c71585;
+  align-self: flex-end;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.chat-input button {
+  padding: 8px 15px;
+  background-color: #8b1e3f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.chat-input button:hover {
+  background: #c71585;
+}

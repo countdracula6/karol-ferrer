@@ -85,3 +85,52 @@ function closeModal() {
     document.getElementById("iframeModalSrc").src = "";
   }
 }
+
+function openLiveModal() {
+  const modal = document.getElementById("liveModal");
+  const video = document.getElementById("karolLiveVideo");
+  modal.style.display = "block";
+  video.play();
+}
+
+function closeLiveModal() {
+  const modal = document.getElementById("liveModal");
+  const video = document.getElementById("karolLiveVideo");
+  modal.style.display = "none";
+  video.pause();
+  video.currentTime = 0;
+}
+
+function sendMessage() {
+  const messageInput = document.getElementById("userMessage");
+  const chatMessages = document.getElementById("chatMessages");
+  const userText = messageInput.value.trim();
+
+  if (userText !== "") {
+    const userMsg = document.createElement("div");
+    userMsg.classList.add("user-message");
+    userMsg.textContent = userText;
+    chatMessages.appendChild(userMsg);
+    messageInput.value = "";
+
+    // Auto reply from Karol after 2 sec
+    setTimeout(() => {
+      const karolReply = document.createElement("div");
+      karolReply.classList.add("karol-message");
+      karolReply.textContent = getRandomKarolReply();
+      chatMessages.appendChild(karolReply);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }, 2000);
+  }
+}
+
+function getRandomKarolReply() {
+  const replies = [
+    "You're making me blush 😘",
+    "I love talking to you 💖",
+    "Wish you were here right now 🔥",
+    "You're so sweet 🥰",
+    "I’m waiting for you baby 💋",
+  ];
+  return replies[Math.floor(Math.random() * replies.length)];
+}

@@ -29,19 +29,13 @@
 
   <body>
     <div class="page-wrapper">
-      <!-- TOP BAR -->
-      <div class="topbar">
-        <a href="#home" title="Home"><i class="fas fa-home"></i></a>
-        <a href="#" title="Bookmark"><i class="fas fa-heart"></i></a>
-        <a
-          href="javascript:void(0)"
-          onclick="toggleCommentBox()"
-          title="Comment"
-          ><i class="fas fa-comment"></i
-        ></a>
-        <a href="#" title="Share"><i class="fas fa-share-alt"></i></a>
-      </div>
-
+      
+<div class="topbar">
+  <a href="#home" title="Home"><i class="fas fa-home"></i></a>
+  <a href="javascript:void(0)" onclick="bookmarkKarol()" title="Bookmark"><i class="fas fa-heart"></i></a>
+  <a href="javascript:void(0)" onclick="shareKarol()" title="Share"><i class="fas fa-share-alt"></i></a>
+  <a href="javascript:void(0)" onclick="showCareMessage()" title="We Care"><i class="fas fa-comment"></i></a>
+</div>
       <!-- COMMENT BOX -->
       <div id="commentBox" class="comment-box">
         <textarea

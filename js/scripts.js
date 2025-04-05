@@ -44,3 +44,18 @@ function shareKarol() {
 function showCareMessage() {
   alert("Only my subscribers can reach me through smart chat. Become one and let's have fun. Kisses!");
 }
+
+let liveCamLoops = 0;
+const liveCamVideo = document.getElementById('liveCamVideo');
+const liveOverlay = document.getElementById('liveOverlay');
+
+// Listen for each time the video ends
+liveCamVideo.addEventListener('ended', () => {
+  liveCamLoops++;
+  if (liveCamLoops >= 3) {
+    liveOverlay.style.display = 'flex'; // Show overlay with padlock
+    liveCamVideo.pause(); // Stop the video
+  } else {
+    liveCamVideo.play(); // Loop again
+  }
+});

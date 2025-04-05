@@ -142,7 +142,9 @@
       <!-- LIVE CAM -->
       <section class="livecam" id="livecam">
         <h2>Live Cam</h2>
-        <div class="status not-available">NOT AVAILABLE NOW!</div>
+        <div class="status not-available" id="liveStatus">
+          NOT AVAILABLE NOW!
+        </div>
         <p class="push-message">
           Activate your push notifications so you know when I'm online, baby!
         </p>
@@ -151,20 +153,26 @@
           <video id="liveCamVideo" autoplay muted playsinline>
             <source src="videos/karol-teaser.mp4" type="video/mp4" />
           </video>
+
           <div class="overlay" id="liveOverlay">
+            <h3>Become a Subscriber</h3>
+            <!-- New luxury title -->
             <i class="fas fa-lock"></i>
             <p>
               Create your account and have full access to my videos, lives and
               private events.
             </p>
+            <a href="love-me.html" class="subscribe-btn">LOVE HER</a>
+            <!-- Button to private VIP page -->
           </div>
         </div>
 
         <form class="login-form">
-          <input type="text" placeholder="Username" />
-          <input type="password" placeholder="Password" />
+          <input type="text" placeholder="Username" required />
+          <input type="password" placeholder="Password" required />
           <button type="submit">Login</button>
         </form>
+
         <div class="signup">
           New here? <a href="#">Sign Up</a> to buy packs & chat live!
         </div>

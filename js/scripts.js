@@ -41,7 +41,6 @@ function shareKarol() {
   }
 }
 
-// Care Message
 function showCareMessage() {
-  alert("I'll be back soon, baby. Waiting for you...");
+  alert("Only my subscribers can reach me through smart chat. Become one and let's have fun. Kisses!");
 }

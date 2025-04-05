@@ -486,3 +486,33 @@ h2 {
   border-radius: 10px;
   border: none;
 }
+
+.luxury-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #111;
+  gap: 10px;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.luxury-menu a {
+  background: #8B1E3F;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.luxury-menu a:hover {
+  background: #c71585;
+  transform: scale(1.05);
+}

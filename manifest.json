@@ -1,0 +1,21 @@
+{
+  "name": "Karol Ferrer",
+  "short_name": "Karol Ferrer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#c71585",
+  "description": "Karol Ferrer | Exclusive VIP Companion",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

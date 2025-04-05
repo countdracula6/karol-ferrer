@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karol Ferrer</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;600;700&family=Cinzel+Decorative:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Manifest (PWA) -->
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Styles -->
+    <style>
+      body {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        background-color: #000;
+        color: #eee;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      section {
+        padding: 3rem 1rem;
+        text-align: center;
+      }
+      .topbar {
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 0;
+      }
+      .topbar img {
+        flex: 1;
+        width: 100%;
+        height: 40px;
+        object-fit: cover;
+      }
+      header {
+        background: #1a1a1a;
+        padding: 3rem 1rem 2rem;
+        text-align: center;
+        color: #c71585;
+        font-size: 2.8rem;
+        font-family: "Cinzel Decorative", cursive;
+        font-weight: bold;
+        letter-spacing: 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        animation: glow 2s ease-in-out infinite alternate;
+      }
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px #c71585, 0 0 20px #c71585;
+        }
+        to {
+          text-shadow: 0 0 20px #ff66cc, 0 0 30px #ff66cc;
+        }
+      }
+      .icon svg {
+        width: 40px;
+        height: 40px;
+        fill: #c71585;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        background: #111;
+        padding: 1rem;
+        flex-wrap: wrap;
+        font-family: "Poppins", sans-serif;
+      }
+      nav a {
+        color: #eee;
+        text-decoration: none;
+        padding: 0.7rem 1.2rem;
+        border-radius: 1rem;
+        background: #c71585;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      nav a:hover {
+        background: #9b0f64;
+      }
+      nav a::before {
+        content: attr(data-icon);
+        margin-right: 0.5rem;
+        font-size: 1.2rem;
+      }
+      .hero h1,
+      h2 {
+        font-family: "Poppins", sans-serif;
+      }
+      .hero h1 {
+        font-size: 2rem;
+        color: #fff;
+      }
+      .hero p {
+        color: #ccc;
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("service-worker.js")
+          .then((registration) => {
+            console.log(
+              "Service Worker registered with scope:",
+              registration.scope
+            );
+          })
+          .catch((error) => {
+            console.log("Service Worker registration failed:", error);
+          });
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="topbar">
+      <img src="https://flagcdn.com/w320/br.png" alt="Brazil" />
+      <img src="https://flagcdn.com/w320/gb.png" alt="United Kingdom" />
+      <img src="https://flagcdn.com/w320/es.png" alt="Spain" />
+    </div>
+
+    <header>
+      <div class="icon">
+        <svg viewBox="0 0 64 64">
+          <path d="M24 2C12 22 42 18 34 54h10c-10-32 22-30 0-52z" />
+        </svg>
+      </div>
+      Karol Ferrer
+    </header>
+
+    <nav>
+      <a href="#home" data-icon="🧑">About Me</a>
+      <a href="#gallery" data-icon="📸">Gallery</a>
+      <a href="#livecam" data-icon="🎥">Live Cam</a>
+      <a href="#wishlist" data-icon="🎁">Wish List</a>
+    </nav>
+
+    <section class="hero" id="home">
+      <h1>Welcome to Karol Ferrer's World</h1>
+      <p>
+        Meet Karol, your 25-year-old ultimate companion — a breathtaking beauty
+        offering elite experiences, sensual massages, unforgettable travels, and
+        exclusive VIP moments tailored just for you.
+      </p>
+    </section>
+
+    <!-- More sections will continue here (video, Some Sugar, Gifts, Profile, Reviews, etc.) -->
+  </body>
+</html>

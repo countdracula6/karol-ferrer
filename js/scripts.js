@@ -51,14 +51,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const liveCamVideo = document.getElementById("liveCamVideo");
   const liveOverlay = document.getElementById("liveOverlay");
 
-  liveCamVideo.addEventListener("timeupdate", function () {
-    if (liveCamVideo.currentTime > 0 && liveCamVideo.currentTime < 0.1) {
-      // Every time it loops back to 0 seconds
-      liveCamLoops++;
-      if (liveCamLoops >= 3) {
-        liveOverlay.style.display = "flex"; // Show padlock overlay
-        liveCamVideo.pause(); // Stop video
-      }
+  liveCamVideo.addEventListener("ended", function () {
+    liveCamLoops++;
+    if (liveCamLoops >= 3) {
+      liveOverlay.style.display = "flex"; // Show padlock overlay
+      liveCamVideo.pause(); // STOP video
+    } else {
+      liveCamVideo.currentTime = 0; // Reset video time
+      liveCamVideo.play(); // Play again manually
     }
   });
 });

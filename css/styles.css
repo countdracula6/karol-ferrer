@@ -691,3 +691,39 @@ h2 {
   border-radius: 8px;
   cursor: pointer;
 }
+
+#gallery {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.gallery-scroll {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery-scroll img {
+  flex: 0 0 auto;
+  width: 80%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  scroll-snap-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.more-photos {
+  margin-top: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #8b1e3f;
+}
+
+.more-photos i {
+  color: #8b1e3f;
+  margin-left: 5px;
+}

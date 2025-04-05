@@ -139,6 +139,33 @@ nav a:hover {
   margin: 2rem 0;
 }
 
+.teaser-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.teaser-container video {
+  width: 100%;
+  display: block;
+  border-radius: 15px;
+}
+
+.watermark {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-family: "Yesteryear", cursive;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.7); /* white but transparent */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  pointer-events: none; /* does not block video clicks */
+}
+
 .video-container {
   width: 300px;
   height: 530px;

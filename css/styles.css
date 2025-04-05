@@ -1257,3 +1257,92 @@ function showChatOverlay() {
     }, 3000); // Hide after 3 seconds
   }
 }
+
+.packs-section {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.packs-section h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #8B1E3F;
+  margin-bottom: 2rem;
+}
+
+.packs-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pack {
+  background: #111;
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 2px solid #8B1E3F;
+  width: 250px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.pack:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.pack-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 10px;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pack h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.pack p {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.pack p span {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+/* Icon Colors by Pack */
+.pack.amateur .pack-icon {
+  color: #ffb6c1; /* Light pink */
+}
+
+.pack.nightlife .pack-icon {
+  color: #ff4d4d; /* Red */
+}
+
+.pack.naughty .pack-icon {
+  color: #c71585; /* Purple / deep pink */
+}
+
+.buy-pack-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #8B1E3F;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.buy-pack-btn:hover {
+  background: #c71585;
+}
+

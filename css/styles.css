@@ -7,6 +7,11 @@ body {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Top Bar */
 .topbar {
   background: #3a0a22;
@@ -53,12 +58,34 @@ body {
 
 /* Logo */
 .logo {
-  font-family: "Abril Fatface", cursive;
-  font-size: 3rem;
+  font-family: "Yesteryear", cursive;
+  font-size: 3.5rem;
   text-align: center;
-  color: #8b1e3f;
   margin: 1rem 0;
   animation: luxuryMove 6s ease-in-out infinite alternate;
+}
+
+.karol {
+  color: #8b1e3f;
+}
+
+.ferrer {
+  color: #c71585;
+}
+
+.luxury-line {
+  width: 60px;
+  height: 3px;
+  background: #fff;
+  margin: 0.5rem auto;
+  border-radius: 10px;
+}
+
+.luxury-sub {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #ccc;
+  font-family: "Poppins", sans-serif;
 }
 
 @keyframes luxuryMove {
@@ -132,6 +159,28 @@ nav a:hover {
   font-size: 0.8rem;
 }
 
+/* I AM KAROLINA */
+.profile {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.profile-table {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.profile-table table {
+  width: 300px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.profile-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #c71585;
+}
+
 /* Sections */
 .hero,
 .livecam,
@@ -143,6 +192,18 @@ nav a:hover {
   padding: 2rem 1rem;
 }
 
+.hero h2,
+.livecam h2,
+.wheres-karol h2,
+.bookings h2,
+.reviews h2,
+.sugar h2,
+.profile h2 {
+  color: #c71585;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Gallery Scroll */
 .gallery-scroll {
   display: flex;
   overflow-x: auto;
@@ -193,6 +254,12 @@ nav a:hover {
   cursor: pointer;
 }
 
+.signup {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
 .status {
   font-weight: bold;
   margin-bottom: 1rem;
@@ -213,6 +280,11 @@ nav a:hover {
   }
 }
 
+/* Where's Karol */
+.map-container {
+  margin-top: 1rem;
+}
+
 /* Reviews */
 .review-card {
   background: #111;
@@ -223,7 +295,7 @@ nav a:hover {
 }
 
 /* Some Sugar */
-.sugar-options {
+.sugar-grid {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
@@ -231,11 +303,36 @@ nav a:hover {
   margin-top: 1rem;
 }
 
-.sugar-box {
+.sugar-item {
+  background: #111;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+}
+
+.sugar-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.sugar-item h3 {
+  margin-top: 1rem;
+  color: #c71585;
+}
+
+.sugar-item p {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  color: #ccc;
+}
+
+.sugar-item button {
   background: #c71585;
   color: #fff;
-  padding: 1.5rem;
-  border-radius: 15px;
-  width: 150px;
-  text-align: center;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+  cursor: pointer;
 }

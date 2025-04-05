@@ -19,8 +19,6 @@ function toggleCommentBox() {
     commentBox.style.display === "block" ? "none" : "block";
 }
 
-// HOME already works by default with <a href="#home">
-
 // Bookmark Karol
 function bookmarkKarol() {
   alert("Karol Ferrer has been bookmarked in your heart!");
@@ -29,33 +27,38 @@ function bookmarkKarol() {
 // Share Karol Profile
 function shareKarol() {
   if (navigator.share) {
-    navigator.share({
-      title: 'Karol Ferrer VIP',
-      text: 'Check out Karol Ferrer VIP site!',
-      url: window.location.href,
-    })
-    .then(() => console.log('Thanks for sharing!'))
-    .catch((error) => console.log('Share failed:', error));
+    navigator
+      .share({
+        title: "Karol Ferrer VIP",
+        text: "Check out Karol Ferrer VIP site!",
+        url: window.location.href,
+      })
+      .then(() => console.log("Thanks for sharing!"))
+      .catch((error) => console.log("Share failed:", error));
   } else {
-    alert('Sharing is not supported on your device.');
+    alert("Sharing is not supported on your device.");
   }
 }
 
 function showCareMessage() {
-  alert("Only my subscribers can reach me through smart chat. Become one and let's have fun. Kisses!");
+  alert(
+    "Only my subscribers can reach me through smart chat. Become one and let's have fun. Kisses!"
+  );
 }
 
-let liveCamLoops = 0;
-const liveCamVideo = document.getElementById('liveCamVideo');
-const liveOverlay = document.getElementById('liveOverlay');
+document.addEventListener("DOMContentLoaded", function () {
+  let liveCamLoops = 0;
+  const liveCamVideo = document.getElementById("liveCamVideo");
+  const liveOverlay = document.getElementById("liveOverlay");
 
-// Listen for each time the video ends
-liveCamVideo.addEventListener('ended', () => {
-  liveCamLoops++;
-  if (liveCamLoops >= 3) {
-    liveOverlay.style.display = 'flex'; // Show overlay with padlock
-    liveCamVideo.pause(); // Stop the video
-  } else {
-    liveCamVideo.play(); // Loop again
-  }
+  liveCamVideo.addEventListener("timeupdate", function () {
+    if (liveCamVideo.currentTime > 0 && liveCamVideo.currentTime < 0.1) {
+      // Every time it loops back to 0 seconds
+      liveCamLoops++;
+      if (liveCamLoops >= 3) {
+        liveOverlay.style.display = "flex"; // Show padlock overlay
+        liveCamVideo.pause(); // Stop video
+      }
+    }
+  });
 });

@@ -1,242 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karol Ferrer - VIP</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karol Ferrer - VIP</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Montserrat:wght@400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italianno&family=Montserrat:wght@400;600&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-  <!-- INTERNAL CSS -->
-  <style>
-    /* Global Settings */
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-color: #000;
-      color: #eee;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
 
-    /* FLAGS */
-    .flags {
-      background: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      padding: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .flag-btn {
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-      height: 50px;
-      min-width: 60px;
-      flex: 0 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .flag-btn img {
-      height: 30px;
-      width: auto;
-      object-fit: contain;
-    }
-
-    .flag-btn:hover {
-      transform: scale(1.2);
-    }
-
-    /* TOPBAR */
-    .topbar {
-      background: #000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      font-family: 'Italianno', cursive;
-      font-size: 3rem;
-      display: flex;
-      align-items: center;
-      color: #c71585;
-      animation: glow 2s ease-in-out infinite alternate;
-    }
-
-    .logo .karol {
-      color: #8B1E3F;
-    }
-
-    .logo .ferrer {
-      color: #C71585;
-      margin-left: 5px;
-    }
-
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #c71585, 0 0 20px #c71585; }
-      to { text-shadow: 0 0 20px #ff66cc, 0 0 30px #ff66cc; }
-    }
-
-    .burger {
-      font-size: 2.5rem;
-      color: #eee;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .burger:hover {
-      transform: scale(1.1);
-    }
-
-    /* NAVIGATION */
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      background: #111;
-      padding: 1rem;
-      flex-wrap: wrap;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    nav a {
-      color: #eee;
-      text-decoration: none;
-      padding: 0.8rem 1.2rem;
-      border-radius: 2rem;
-      background: linear-gradient(135deg, #c71585, #8B1E3F);
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      box-shadow: 0 4px 8px rgba(199, 21, 133, 0.4);
-      transition: all 0.3s ease;
-    }
-
-    nav a:hover {
-      background: linear-gradient(135deg, #9b0f64, #66112b);
-      transform: scale(1.05);
-    }
-
-    nav i {
-      font-size: 1.4rem;
-    }
-
-    /* HERO SECTION */
-    .hero h1, h2 {
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      color: #fff;
-      text-align: center;
-      margin: 1rem;
-    }
-
-    .hero p {
-      color: #ccc;
-      margin: 1rem auto;
-      font-size: 1.2rem;
-      max-width: 700px;
-      text-align: center;
-      padding: 0 1rem;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .logo {
-        font-size: 2.5rem;
-        text-align: center;
-        width: 100%;
+    <!-- Service Worker (PWA) -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("service-worker.js")
+          .then((registration) => {
+            console.log(
+              "Service Worker registered with scope:",
+              registration.scope
+            );
+          })
+          .catch((error) => {
+            console.log("Service Worker registration failed:", error);
+          });
       }
+    </script>
 
-      .burger {
-        margin-top: 0.5rem;
-      }
+    <meta name="theme-color" content="#000000" />
+    <link rel="manifest" href="manifest.json" />
+  </head>
 
-      nav {
-        gap: 1rem;
-      }
+  <body>
+    <!-- FLAGS -->
+    <div class="flags">
+      <button class="flag-btn">
+        <img src="https://flagcdn.com/w40/br.png" alt="Português" />
+      </button>
+      <button class="flag-btn">
+        <img src="https://flagcdn.com/w40/gb.png" alt="English" />
+      </button>
+      <button class="flag-btn">
+        <img src="https://flagcdn.com/w40/es.png" alt="Español" />
+      </button>
+    </div>
 
-      .hero h1 {
-        font-size: 2rem;
-      }
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="logo">
+        <span class="karol">Karol</span><span class="ferrer">Ferrer</span>
+      </div>
+      <div class="burger">&#9776;</div>
+    </div>
 
-      .hero p {
-        font-size: 1rem;
-      }
-    }
-  </style>
+    <!-- NAVIGATION -->
+    <nav>
+      <a href="#home"><i class="fas fa-user"></i> About Me</a>
+      <a href="#gallery"><i class="fas fa-camera"></i> Gallery</a>
+      <a href="#livecam"><i class="fas fa-video"></i> Live Cam</a>
+    </nav>
 
-  <!-- INTERNAL JS -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-      .then(registration => {
-        console.log('Service Worker registered with scope:', registration.scope);
-      }).catch(error => {
-        console.log('Service Worker registration failed:', error);
-      });
-    }
-  </script>
+    <!-- TEASER VIDEO -->
+    <section class="teaser">
+      <div class="video-container">
+        <video controls autoplay muted loop width="100%">
+          <source src="videos/karol.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="watermark">KAROLFERRER</div>
+      </div>
+    </section>
 
-  <meta name="theme-color" content="#000000">
-  <link rel="manifest" href="manifest.json">
-
-</head>
-
-<body>
-
-<!-- FLAGS -->
-<div class="flags">
-  <button class="flag-btn">
-    <img src="https://flagcdn.com/w40/br.png" alt="Português">
-  </button>
-  <button class="flag-btn">
-    <img src="https://flagcdn.com/w40/gb.png" alt="English">
-  </button>
-  <button class="flag-btn">
-    <img src="https://flagcdn.com/w40/es.png" alt="Español">
-  </button>
-</div>
-
-<!-- TOPBAR -->
-<div class="topbar">
-  <div class="logo">
-    <span class="karol">Karol</span><span class="ferrer">Ferrer</span>
-  </div>
-  <div class="burger">
-    &#9776;
-  </div>
-</div>
-
-<!-- NAVIGATION -->
-<nav>
-  <a href="#home"><i class="fas fa-user"></i> About Me</a>
-  <a href="#gallery"><i class="fas fa-camera"></i> Gallery</a>
-  <a href="#livecam"><i class="fas fa-video"></i> Live Cam</a>
-</nav>
-
-<!-- HERO SECTION -->
-<section class="hero" id="home">
-  <h1>Welcome to Karol Ferrer's World</h1>
-  <p>Meet Karol, your 25-year-old ultimate companion — offering elite experiences, sensual massages, unforgettable travels, and exclusive VIP moments just for you.</p>
-</section>
-
-</body>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <h1>Welcome to Karol Ferrer's World</h1>
+      <p>
+        Meet Karol, your 25-year-old ultimate companion — offering elite
+        experiences, sensual massages, unforgettable travels, and exclusive VIP
+        moments just for you.
+      </p>
+    </section>
+  </body>
 </html>

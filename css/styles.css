@@ -2,36 +2,53 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #000;
+  background: #000;
   color: #eee;
+  scroll-behavior: smooth;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-h1,
-h2 {
-  font-family: "Poppins", sans-serif;
-}
-
-/* Flags */
-.flags {
+/* Top Bar */
+.topbar {
+  background: #3a0a22;
   display: flex;
   justify-content: center;
+  gap: 1.5rem;
   padding: 1rem;
-  gap: 10px;
 }
 
-.flag-btn {
-  background: none;
+.topbar a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.topbar a:hover {
+  color: #c71585;
+  transform: scale(1.2);
+}
+
+/* Comment Box */
+.comment-box {
+  display: none;
+  text-align: center;
+  margin: 1rem;
+}
+
+.comment-box textarea {
+  width: 80%;
+  height: 80px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.comment-box button {
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  background: #c71585;
   border: none;
+  border-radius: 10px;
+  color: #fff;
   cursor: pointer;
-}
-
-.flag-btn img {
-  height: 30px;
 }
 
 /* Logo */
@@ -41,6 +58,22 @@ h2 {
   text-align: center;
   color: #8b1e3f;
   margin: 1rem 0;
+  animation: luxuryMove 6s ease-in-out infinite alternate;
+}
+
+@keyframes luxuryMove {
+  0% {
+    transform: scale(1) translateY(0);
+    text-shadow: 0 0 10px #c71585;
+  }
+  50% {
+    transform: scale(1.05) translateY(-5px);
+    text-shadow: 0 0 20px #ff66cc;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    text-shadow: 0 0 10px #c71585;
+  }
 }
 
 /* Navbar */
@@ -50,12 +83,14 @@ nav {
   gap: 1.5rem;
   background: #111;
   padding: 1rem;
+  flex-wrap: wrap;
 }
 
 nav a {
   background: #c71585;
   padding: 0.6rem 1.2rem;
   border-radius: 20px;
+  color: #fff;
   transition: 0.3s;
 }
 
@@ -98,18 +133,16 @@ nav a:hover {
 }
 
 /* Sections */
-.hero {
+.hero,
+.livecam,
+.wheres-karol,
+.bookings,
+.reviews,
+.sugar {
   text-align: center;
   padding: 2rem 1rem;
 }
 
-.hero p {
-  max-width: 600px;
-  margin: 0 auto;
-  color: #ccc;
-}
-
-/* Gallery Scroll */
 .gallery-scroll {
   display: flex;
   overflow-x: auto;
@@ -122,50 +155,87 @@ nav a:hover {
   border-radius: 10px;
 }
 
-/* Map */
-.wheres-karol {
-  text-align: center;
-  padding: 2rem 1rem;
+/* Live Cam */
+.livecam-placeholder {
+  width: 300px;
+  border-radius: 10px;
+  margin: 1rem 0;
 }
 
-.wheres-karol h2 {
-  color: #8b1e3f;
+.play-button {
+  background: #c71585;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
 }
 
-.map-container {
+.login-form input,
+.chat-box input {
+  width: 80%;
+  margin: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.login-form button,
+.chat-box button {
+  margin-top: 1rem;
+  background: #c71585;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.status {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.status.available {
+  color: lime;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* Reviews */
+.review-card {
+  background: #111;
+  padding: 1rem;
+  margin: 0.5rem auto;
+  width: 80%;
+  border-radius: 10px;
+}
+
+/* Some Sugar */
+.sugar-options {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
   margin-top: 1rem;
 }
 
-/* Heart Divider */
-.hearts-divider {
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-}
-
-.hearts {
-  color: #c71585;
-  font-size: 2rem;
-  animation: heartbeat 1.5s infinite;
-}
-
-@keyframes heartbeat {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-}
-
-/* Bookings */
-.bookings {
-  background: #111;
+.sugar-box {
+  background: #c71585;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  width: 150px;
   text-align: center;
-  padding: 2rem;
-}
-
-.bookings h2 {
-  color: #8b1e3f;
 }

@@ -1244,28 +1244,14 @@ h2 {
   background: #c71585;
 }
 
-let chatOverlayTimeout;
-
-function showChatOverlay() {
-  const chatOverlay = document.getElementById('liveChatOverlay');
-  if (chatOverlay) {
-    chatOverlay.classList.remove('hidden');
-    
-    clearTimeout(chatOverlayTimeout);
-    chatOverlayTimeout = setTimeout(() => {
-      chatOverlay.classList.add('hidden');
-    }, 3000); // Hide after 3 seconds
-  }
-}
-
 .packs-section {
   padding: 2rem 1rem;
   text-align: center;
 }
 
 .packs-section h2 {
-  font-family: 'Poppins', sans-serif;
-  color: #8B1E3F;
+  font-family: "Poppins", sans-serif;
+  color: #8b1e3f;
   margin-bottom: 2rem;
 }
 
@@ -1280,7 +1266,7 @@ function showChatOverlay() {
   background: #111;
   padding: 1.5rem;
   border-radius: 15px;
-  border: 2px solid #8B1E3F;
+  border: 2px solid #8b1e3f;
   width: 250px;
   transition: 0.3s;
   text-align: center;
@@ -1333,7 +1319,7 @@ function showChatOverlay() {
 .buy-pack-btn {
   margin-top: 15px;
   padding: 10px 20px;
-  background: #8B1E3F;
+  background: #8b1e3f;
   color: white;
   border: none;
   border-radius: 20px;
@@ -1345,4 +1331,3 @@ function showChatOverlay() {
 .buy-pack-btn:hover {
   background: #c71585;
 }
-

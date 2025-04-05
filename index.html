@@ -29,26 +29,40 @@
 
   <body>
     <div class="page-wrapper">
-      <div class="topbar">
-        <a href="#home" title="Home"><i class="fas fa-home"></i></a>
-        <a href="javascript:void(0)" onclick="bookmarkKarol()" title="Bookmark"
-          ><i class="fas fa-heart"></i
-        ></a>
-        <a href="javascript:void(0)" onclick="shareKarol()" title="Share"
-          ><i class="fas fa-share-alt"></i
-        ></a>
-        <a href="javascript:void(0)" onclick="showCareMessage()" title="We Care"
-          ><i class="fas fa-comment"></i
-        ></a>
-      </div>
-      <!-- COMMENT BOX -->
-      <div id="commentBox" class="comment-box">
-        <textarea
-          maxlength="140"
-          placeholder="Leave a message (max 140 chars)"
-        ></textarea>
-        <button>Send</button>
-      </div>
+        <div class="topbar">
+          <a href="#home" title="Home">
+            <i class="fas fa-home"></i>
+          </a>
+      
+          <a href="javascript:void(0)" onclick="bookmarkKarol()" title="Bookmark">
+            <i class="fas fa-heart"></i>
+          </a>
+      
+          <a href="javascript:void(0)" onclick="shareKarol()" title="Share">
+            <i class="fas fa-share-alt"></i>
+          </a>
+      
+          <a href="javascript:void(0)" onclick="showCareMessage()" title="We Care">
+            <i class="fas fa-comment"></i>
+          </a>
+      
+          <!-- NEW BUTTON: Watch Karol -->
+          <a href="javascript:void(0)" onclick="openLiveModal()" title="Watch Karol">
+            <i class="fas fa-video"></i>
+          </a>
+      
+          <!-- NEW BUTTON: My Packs -->
+          <a href="#packs" title="My Packs">
+            <i class="fas fa-gift"></i>
+          </a>
+        </div>
+      
+        <!-- COMMENT BOX -->
+        <div id="commentBox" class="comment-box">
+          <textarea maxlength="140" placeholder="Leave a message (max 140 chars)"></textarea>
+          <button>Send</button>
+        </div>
+      
 
       <!-- LOGO -->
       <header class="logo" id="home">
@@ -313,14 +327,7 @@
           </div>
         </div>
       </section>
-      <br />
-
-      <center>
-        <button onclick="openLiveModal()" class="live-test-btn">
-          Test Live Cam
-        </button>
-      </center>
-      <br />
+      
 
       <!-- LANGUAGE FLAGS -->
       <section class="flags-section">

@@ -381,29 +381,33 @@
       <div class="modal-content livecam-live">
         <span class="close" onclick="closeLiveModal()">&times;</span>
 
+        <div class="live-top-bar">
+          <div class="balance">
+            Balance: $<span id="userBalance">100.00</span>
+          </div>
+          <button onclick="tipKarol()" class="tip-btn">Tip ❤️</button>
+          <button onclick="goPrivate()" class="private-btn">PRIVATE CAM</button>
+        </div>
+
         <div class="live-video-container">
-          <video id="karolLiveVideo" autoplay muted playsinline>
-            <source src="videos/livedakarol.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <div class="live-chat">
-          <div id="chatMessages" class="chat-messages">
-            <div class="karol-message">Hey baby 😘</div>
-            <div class="karol-message">I'm so happy you're here with me 💖</div>
+            <video id="karolLiveVideo" autoplay muted playsinline>
+              <source src="videos/livedakarol.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          
+            <!-- Chat overlay inside video -->
+            <div class="live-chat-overlay" id="liveChatOverlay">
+              <div id="chatMessages" class="chat-messages">
+                <div class="karol-message">Hey baby 😘</div>
+                <div class="karol-message">I'm so happy you're here with me 💖</div>
+              </div>
+          
+              <div class="chat-input">
+                <input type="text" id="userMessage" placeholder="Type your message..." onfocus="showChatOverlay()" />
+                <button onclick="sendMessage()">Send</button>
+              </div>
+            </div>
           </div>
-
-          <div class="chat-input">
-            <input
-              type="text"
-              id="userMessage"
-              placeholder="Type your message..."
-            />
-            <button onclick="sendMessage()">Send</button>
-          </div>
-        </div>
-      </div>
-    </div>
+          
   </body>
 </html>

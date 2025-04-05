@@ -889,3 +889,17 @@ h2 {
 .chat-input button:hover {
   background: #c71585;
 }
+
+.live-test-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #8b1e3f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  font-weight: bold;
+  z-index: 9999;
+  cursor: pointer;
+}

@@ -23,30 +23,13 @@
     <meta name="theme-color" content="#000000" />
     <link rel="manifest" href="manifest.json" />
 
-    <!-- Smooth Scroll -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-          anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            document
-              .querySelector(this.getAttribute("href"))
-              .scrollIntoView({ behavior: "smooth" });
-          });
-        });
-      });
-
-      function toggleCommentBox() {
-        const commentBox = document.getElementById("commentBox");
-        commentBox.style.display =
-          commentBox.style.display === "block" ? "none" : "block";
-      }
-    </script>
+    <!-- Scripts -->
+    <script defer src="js/scripts.js"></script>
   </head>
 
   <body>
     <div class="page-wrapper">
-      <!-- TOP BAR ICONS -->
+      <!-- TOP BAR -->
       <div class="topbar">
         <a href="#home" title="Home"><i class="fas fa-home"></i></a>
         <a href="#" title="Bookmark"><i class="fas fa-heart"></i></a>
@@ -104,7 +87,7 @@
           <table>
             <tr>
               <td>Age</td>
-              <td>25</td>
+              <td>22</td>
             </tr>
             <tr>
               <td>City</td>
@@ -128,10 +111,20 @@
             </tr>
             <tr>
               <td>Ethnicity</td>
-              <td>European</td>
+              <td>Italo-Brazilian</td>
             </tr>
           </table>
         </div>
+      </section>
+
+      <!-- SEXY AD TEXT -->
+      <section class="hero">
+        <p class="sexy-description">
+          More than a fantasy, Karol Ferrer is a privilege.<br />
+          Discreet, breathtaking, and passionate — she offers experiences beyond
+          your wildest dreams.<br />
+          Elegance, class, and desire — wrapped into one unforgettable muse.
+        </p>
       </section>
 
       <!-- PHOTOS SECTION -->
@@ -147,19 +140,17 @@
       <!-- LIVE CAM SECTION -->
       <section class="livecam" id="livecam">
         <h2>Live Cam</h2>
-
-        <!-- Live Status -->
         <div class="status not-available">NOT AVAILABLE</div>
         <p class="push-message">
           Activate your push notifications so you know when I'm online, baby!
         </p>
 
-        <!-- Streaming Placeholder -->
+        <!-- Streaming Embed Placeholder -->
         <video muted autoplay loop class="livecam-stream">
           <source src="videos/karol-teaser.mp4" type="video/mp4" />
         </video>
 
-        <button class="play-button">PLAY</button>
+        <button class="play-button">WATCH ME</button>
 
         <form class="login-form">
           <input type="text" placeholder="Username" />
@@ -205,7 +196,7 @@
           <i class="fas fa-sms"></i>
         </div>
         <p>
-          You can also contact her directly via regular WhatsApp, Telegram, or
+          You can also contact ME directly via regular WhatsApp, Telegram, or
           SMS if you prefer.
         </p>
       </section>
@@ -221,7 +212,7 @@
           ⭐⭐⭐⭐<br />Wonderful experience, will book again! - Daniel
         </div>
         <div class="review-card">
-          ⭐⭐⭐⭐⭐<br />Felt like a real date. Incredible connection. - André
+          ⭐⭐⭐⭐<br />Felt like a real date. Incredible connection. - André
         </div>
         <div class="review-card">
           ⭐⭐⭐⭐<br />Apartment was very clean, discreet, and cozy. - Tomas
@@ -232,7 +223,7 @@
         </div>
       </section>
 
-      <!-- SOME SUGAR -->
+      <!-- SOME SUGAR + MODAL -->
       <section class="sugar">
         <h2>Some Sugar?</h2>
         <div class="sugar-grid">
@@ -240,25 +231,59 @@
             <img src="images/apple-watch.jpg" alt="Apple Watch" />
             <h3>Apple Watch</h3>
             <p>A stylish gift Karol dreams of having on her wrist.</p>
-            <button>Donate</button>
+            <button onclick="openModal()">Donate</button>
           </div>
           <div class="sugar-item">
-            <img src="images/flight-ticket.jpg" alt="Fly Ticket" />
-            <h3>Flying Ticket</h3>
+            <img src="images/buenos-aires.jpg" alt="Fly Ticket" />
+            <h3>Fly Ticket</h3>
             <p>Help Karol explore the world — next stop, Buenos Aires!</p>
-            <button>Donate</button>
+            <button onclick="openModal()">Donate</button>
           </div>
           <div class="sugar-item">
-            <img src="images/cash-gift.jpg" alt="Sweet Cash" />
-            <h3>Mimos?</h3>
+            <img src="images/wallet.jpg" alt="Sweet Cash" />
+            <h3>Sweet Cash</h3>
             <p>Choose to send $300, $500, or $1000 to sweeten her day!</p>
-            <button>Donate</button>
+            <button onclick="openModal()">Donate</button>
+          </div>
+        </div>
+
+        <!-- MODAL -->
+        <div id="donateModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Choose your Gift</h3>
+            <button>$300</button>
+            <button>$500</button>
+            <button>$1000</button>
           </div>
         </div>
       </section>
 
+      <!-- BEST OF KAROL PACK -->
+      <section class="best-pack">
+        <h2>Best of Karol</h2>
+        <div class="pack-card">
+          <i class="fas fa-gift"></i>
+          <p>
+            The ultimate experience. Personalized videos, private shows,
+            exclusive photos.
+          </p>
+          <button>Buy Now</button>
+        </div>
+      </section>
+
+      <!-- LANGUAGE FLAGS -->
+      <section class="flags-section">
+        <p>Choose your language</p>
+        <div class="flags">
+          <img src="images/flag-br.png" alt="Português" />
+          <img src="images/flag-gb.png" alt="English" />
+          <img src="images/flag-es.png" alt="Español" />
+        </div>
+      </section>
+
       <!-- FOOTER -->
-      <footer class="footer">© 2025 powered by .../synch/paulo</footer>
+      <footer class="footer">© 2025 powered by ".../synch/paulo.sh"</footer>
     </div>
     <!-- page-wrapper -->
   </body>

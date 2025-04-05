@@ -156,13 +156,13 @@ nav a:hover {
 
 .watermark {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 0.3rem 0.6rem;
-  border-radius: 5px;
-  font-size: 0.8rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px #fff;
 }
 
 /* Sections */
@@ -172,7 +172,9 @@ nav a:hover {
 .bookings,
 .reviews,
 .sugar,
-.profile {
+.profile,
+.best-pack,
+.flags-section {
   text-align: center;
   padding: 2rem 1rem;
 }
@@ -182,7 +184,14 @@ h2 {
   font-family: "Poppins", sans-serif;
 }
 
-/* I AM KAROLINA */
+/* Sexy Description */
+.sexy-description {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 1rem;
+}
+
+/* Profile Table */
 .profile-table {
   overflow-x: auto;
   margin-top: 1rem;
@@ -300,6 +309,9 @@ h2 {
 .icons-contact i {
   font-size: 2rem;
   margin: 0 10px;
+}
+
+.icons-contact i:nth-child(1) {
   color: #25d366;
 }
 
@@ -311,11 +323,6 @@ h2 {
   color: #ff9900;
 }
 
-/* Map */
-.map-container {
-  margin-top: 1rem;
-}
-
 /* Reviews */
 .review-card {
   background: #111;
@@ -325,7 +332,7 @@ h2 {
   border-radius: 10px;
 }
 
-/* Some Sugar */
+/* Some Sugar + Modal */
 .sugar-grid {
   display: flex;
   justify-content: center;
@@ -366,6 +373,100 @@ h2 {
   border-radius: 10px;
   margin-top: 0.5rem;
   cursor: pointer;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background: #111;
+  padding: 2rem;
+  margin: 15% auto;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal-content h3 {
+  color: #c71585;
+}
+
+.modal-content button {
+  background: #c71585;
+  color: #fff;
+  border: none;
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Best of Karol Pack */
+.best-pack {
+  text-align: center;
+}
+
+.pack-card {
+  background: #111;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem auto;
+  width: 250px;
+}
+
+.pack-card i {
+  font-size: 3rem;
+  color: #c71585;
+}
+
+.pack-card p {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  color: #ccc;
+}
+
+.pack-card button {
+  background: #c71585;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Flags */
+.flags-section {
+  margin-top: 3rem;
+}
+
+.flags-section p {
+  margin-bottom: 1rem;
+}
+
+.flags {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.flags img {
+  width: 30px;
+  height: 20px;
+  border-radius: 3px;
 }
 
 /* Footer */

@@ -316,19 +316,6 @@
         </div>
       </section>
 
-      <!-- BEST OF KAROL -->
-      <section class="best-pack">
-        <h2>Best of Karol Ferrer</h2>
-        <div class="pack-card">
-          <i class="fas fa-gift"></i>
-          <p>
-            The ultimate experience. Personalized videos, private shows,
-            exclusive photos.
-          </p>
-          <button>FREE FOR MY LOVERS</button>
-        </div>
-      </section>
-
       <!-- LANGUAGE FLAGS -->
       <section class="flags-section">
         <p>Choose your language</p>
@@ -343,5 +330,45 @@
       <footer class="footer">© 2025 powered by ".../synch/paulo.sh"</footer>
     </div>
     <!-- page-wrapper -->
+
+    <!-- NOW MODALS OUTSIDE PAGE WRAPPER -->
+
+    <!-- IFRAME MODAL (for Apple Watch and Fly Ticket) -->
+    <div id="iframeModal" class="modal">
+      <div class="modal-content iframe-container">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <iframe
+          id="iframeModalSrc"
+          src=""
+          frameborder="0"
+          width="100%"
+          height="400px"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- MONEY DONATION MODAL -->
+    <div id="paymentModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Choose Your Donation</h3>
+
+        <div class="donation-options">
+          <button onclick="selectDonation(100)">$100</button>
+          <button onclick="selectDonation(300)">$300</button>
+          <button onclick="selectDonation(500)">$500</button>
+          <button onclick="selectDonation(1000)">$1000</button>
+        </div>
+
+        <h3>Payment Method</h3>
+
+        <div class="payment-methods">
+          <button onclick="payMethod('PIX')">PIX</button>
+          <button onclick="payMethod('Credit Card')">Credit Card</button>
+          <button onclick="payMethod('Bitcoin')">BTC</button>
+          <button onclick="payMethod('Wire Transfer')">Wire Transfer</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

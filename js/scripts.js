@@ -59,3 +59,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+function openPaymentModal() {
+  const modal = document.getElementById("paymentModal");
+  modal.style.display = "block";
+}
+
+function selectDonation(amount) {
+  alert("You selected to donate $" + amount);
+}
+
+function payMethod(method) {
+  alert(
+    "You selected " +
+      method +
+      " as your payment method. We will contact you shortly!"
+  );
+  closeModal();
+}
+
+function closeModal() {
+  document.getElementById("iframeModal").style.display = "none";
+  document.getElementById("paymentModal").style.display = "none";
+  if (document.getElementById("iframeModalSrc")) {
+    document.getElementById("iframeModalSrc").src = "";
+  }
+}

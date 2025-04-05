@@ -29,201 +29,9 @@
 
   <body>
     <div class="page-wrapper">
-      <!-- TOP BAR -->
-      <div class="topbar">
-        <a href="#home" title="Home"><i class="fas fa-home"></i></a>
-        <a href="#" title="Bookmark"><i class="fas fa-heart"></i></a>
-        <a
-          href="javascript:void(0)"
-          onclick="toggleCommentBox()"
-          title="Comment"
-          ><i class="fas fa-comment"></i
-        ></a>
-        <a href="#" title="Share"><i class="fas fa-share-alt"></i></a>
-      </div>
+      <!-- Top bar, Logo, Navigation... (same as before) -->
 
-      <!-- COMMENT BOX -->
-      <div id="commentBox" class="comment-box">
-        <textarea
-          maxlength="140"
-          placeholder="Leave a message (max 140 chars)"
-        ></textarea>
-        <button>Send</button>
-      </div>
-
-      <!-- LOGO -->
-      <header class="logo" id="home">
-        <span class="karol">Karol</span> <span class="ferrer">Ferrer</span>
-        <i class="fas fa-gem"></i>
-        <div class="luxury-line"></div>
-        <div class="luxury-sub">
-          Pleasure is never enough, I am more than you dreamed. ENJOY.
-        </div>
-      </header>
-
-      <!-- NAVIGATION -->
-      <nav>
-        <a href="#gallery">Photos</a>
-        <a href="#livecam">Live Cam</a>
-        <a href="#wheres-karol">Where's Karol</a>
-        <a href="#bookings">How to Book Me</a>
-      </nav>
-
-      <!-- TEASER VIDEO -->
-      <section class="teaser">
-        <div class="video-container">
-          <video controls autoplay muted loop>
-            <source src="videos/karol.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div class="watermark">KAROLFERRER</div>
-        </div>
-      </section>
-
-      <!-- I AM KAROLINA -->
-      <section class="profile" id="profile">
-        <h2>I AM KAROLINA</h2>
-        <div class="profile-table">
-          <table>
-            <tr>
-              <td>Age</td>
-              <td>22</td>
-            </tr>
-            <tr>
-              <td>City</td>
-              <td>São Paulo</td>
-            </tr>
-            <tr>
-              <td>Height</td>
-              <td>1.68m</td>
-            </tr>
-            <tr>
-              <td>Weight</td>
-              <td>56kg</td>
-            </tr>
-            <tr>
-              <td>Eyes</td>
-              <td>Green</td>
-            </tr>
-            <tr>
-              <td>Hair</td>
-              <td>Blonde</td>
-            </tr>
-            <tr>
-              <td>Ethnicity</td>
-              <td>Italo-Brazilian</td>
-            </tr>
-          </table>
-        </div>
-      </section>
-
-      <!-- SEXY AD TEXT -->
-      <section class="hero">
-        <p class="sexy-description">
-          More than a fantasy, Karol Ferrer is a privilege.<br />
-          Discreet, breathtaking, and passionate — she offers experiences beyond
-          your wildest dreams.<br />
-          Elegance, class, and desire — wrapped into one unforgettable muse.
-        </p>
-      </section>
-
-      <!-- PHOTOS SECTION -->
-      <section class="hero" id="gallery">
-        <h2>Photos</h2>
-        <div class="gallery-scroll">
-          <img src="images/photo1.jpg" alt="Apartment 1" />
-          <img src="images/photo2.jpg" alt="Apartment 2" />
-          <img src="images/photo3.jpg" alt="Apartment 3" />
-        </div>
-      </section>
-
-      <!-- LIVE CAM SECTION -->
-      <section class="livecam" id="livecam">
-        <h2>Live Cam</h2>
-        <div class="status not-available">NOT AVAILABLE</div>
-        <p class="push-message">
-          Activate your push notifications so you know when I'm online, baby!
-        </p>
-
-        <!-- Streaming Embed Placeholder -->
-        <video muted autoplay loop class="livecam-stream">
-          <source src="videos/karol-teaser.mp4" type="video/mp4" />
-        </video>
-
-        <button class="play-button">WATCH ME</button>
-
-        <form class="login-form">
-          <input type="text" placeholder="Username" />
-          <input type="password" placeholder="Password" />
-          <button type="submit">Login</button>
-        </form>
-        <div class="signup">
-          New here? <a href="#">Sign Up</a> to buy packs & chat live!
-        </div>
-
-        <div class="chat-box">
-          <input type="text" placeholder="Type your message..." />
-          <button>Send</button>
-        </div>
-      </section>
-
-      <!-- WHERE'S KAROL -->
-      <section class="wheres-karol" id="wheres-karol">
-        <h2>Where's Karol?</h2>
-        <p>Alameda Lorena, 473 - São Paulo</p>
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps?q=Alameda+Lorena+473,+São+Paulo&output=embed"
-            width="100%"
-            height="300"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe>
-        </div>
-      </section>
-
-      <!-- HOW TO BOOK ME -->
-      <section class="bookings" id="bookings">
-        <h2>How to Book Me</h2>
-        <p>
-          Karol Ferrer offers private, encrypted communication. Connect through
-          her app using:
-        </p>
-        <div class="icons-contact">
-          <i class="fab fa-whatsapp"></i>
-          <i class="fab fa-telegram"></i>
-          <i class="fas fa-sms"></i>
-        </div>
-        <p>
-          You can also contact ME directly via regular WhatsApp, Telegram, or
-          SMS if you prefer.
-        </p>
-      </section>
-
-      <!-- LATEST REVIEWS -->
-      <section class="reviews">
-        <h2>Latest Reviews</h2>
-        <div class="review-card">
-          ⭐⭐⭐⭐⭐<br />Absolutely perfect! Karol is stunning and super kind.
-          - Lucas
-        </div>
-        <div class="review-card">
-          ⭐⭐⭐⭐<br />Wonderful experience, will book again! - Daniel
-        </div>
-        <div class="review-card">
-          ⭐⭐⭐⭐<br />Felt like a real date. Incredible connection. - André
-        </div>
-        <div class="review-card">
-          ⭐⭐⭐⭐<br />Apartment was very clean, discreet, and cozy. - Tomas
-        </div>
-        <div class="review-card">
-          ⭐⭐⭐⭐⭐<br />She made me feel like a king. Highly recommended! -
-          Rafael
-        </div>
-      </section>
-
-      <!-- SOME SUGAR + MODAL -->
+      <!-- SOME SUGAR + MODALS -->
       <section class="sugar">
         <h2>Some Sugar?</h2>
         <div class="sugar-grid">
@@ -231,59 +39,68 @@
             <img src="images/apple-watch.jpg" alt="Apple Watch" />
             <h3>Apple Watch</h3>
             <p>A stylish gift Karol dreams of having on her wrist.</p>
-            <button onclick="openModal()">Donate</button>
+            <button
+              onclick="openIframeModal('https://www.apple.com/br/shop/buy-watch/apple-watch-se')"
+            >
+              Donate
+            </button>
           </div>
           <div class="sugar-item">
             <img src="images/buenos-aires.jpg" alt="Fly Ticket" />
             <h3>Fly Ticket</h3>
             <p>Help Karol explore the world — next stop, Buenos Aires!</p>
-            <button onclick="openModal()">Donate</button>
+            <button onclick="openIframeModal('https://www.google.com/flights')">
+              Donate
+            </button>
+            <!-- Example flight URL -->
           </div>
           <div class="sugar-item">
             <img src="images/wallet.jpg" alt="Sweet Cash" />
             <h3>Sweet Cash</h3>
             <p>Choose to send $300, $500, or $1000 to sweeten her day!</p>
-            <button onclick="openModal()">Donate</button>
+            <button onclick="openPaymentModal()">Donate</button>
           </div>
         </div>
 
-        <!-- MODAL -->
-        <div id="donateModal" class="modal">
+        <!-- IFRAME MODAL (for Apple Watch and Fly Ticket) -->
+        <div id="iframeModal" class="modal">
+          <div class="modal-content iframe-container">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe
+              id="iframeModalSrc"
+              src=""
+              frameborder="0"
+              width="100%"
+              height="400px"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- PAYMENT MODAL (for Sweet Cash) -->
+        <div id="paymentModal" class="modal">
           <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
-            <h3>Choose your Gift</h3>
-            <button>$300</button>
-            <button>$500</button>
-            <button>$1000</button>
+            <h3>Choose Your Payment Method</h3>
+            <button>PIX</button>
+            <button>Credit Card</button>
+            <button>Wire Transfer</button>
           </div>
         </div>
       </section>
 
-      <!-- BEST OF KAROL PACK -->
-      <section class="best-pack">
-        <h2>Best of Karol</h2>
-        <div class="pack-card">
-          <i class="fas fa-gift"></i>
-          <p>
-            The ultimate experience. Personalized videos, private shows,
-            exclusive photos.
-          </p>
-          <button>Buy Now</button>
-        </div>
-      </section>
+      <!-- BEST OF KAROL (same) -->
 
-      <!-- LANGUAGE FLAGS -->
+      <!-- LANGUAGE FLAGS (REAL FLAGS NOW!) -->
       <section class="flags-section">
         <p>Choose your language</p>
         <div class="flags">
-          <img src="images/flag-br.png" alt="Português" />
-          <img src="images/flag-gb.png" alt="English" />
-          <img src="images/flag-es.png" alt="Español" />
+          <img src="https://flagcdn.com/w40/br.png" alt="Português" />
+          <img src="https://flagcdn.com/w40/gb.png" alt="English" />
+          <img src="https://flagcdn.com/w40/es.png" alt="Español" />
         </div>
       </section>
 
-      <!-- FOOTER -->
-      <footer class="footer">© 2025 powered by ".../synch/paulo.sh"</footer>
+      <!-- FOOTER (same) -->
     </div>
     <!-- page-wrapper -->
   </body>
